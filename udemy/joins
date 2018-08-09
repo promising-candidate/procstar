@@ -1,0 +1,44 @@
+myList = ["a", "b", "c", "d"]
+letters = "abcdefghijklmnopqrstuvwxyz"
+numbers = "1234567890"
+
+newString = ', '.join(letters)
+#python3 doesn't require join to be in a loop
+#for c in myList:
+#    newString += c + ", "
+#    newString = ", ".join(myList)
+
+print(newString)
+
+locations = {0: "You are sitting in front of a computer learning Python",
+             1: "You are standing at the end of a road before a small brick building",
+             2: "You are at the top of a hill",
+             3: "You are inside a building, a well house for a small stream",
+             4: "You are in a valley beside a stream",
+             5: "You are in the forest"}
+
+exits = [{"Q": 0},
+         {"W": 2, "E": 3, "N": 5, "S": 4, "Q": 0},
+         {"N": 5, "Q": 0},
+         {"W": 1, "Q": 0},
+         {"N": 1, "W": 2, "Q": 0},
+         {"W": 2, "S": 1, "Q": 0}
+         ]
+
+loc = 1
+while True:
+    availableExits = ", ".join(exits[loc].keys())
+#    for directions in exits[loc].keys():
+#        availableExits += directions + ", "
+
+    print(locations[loc])
+
+    if loc == 0:
+        break
+
+    directions = input("Available exits are " + availableExits).upper()
+    print()
+    if directions in exits[loc]:
+        loc = exits[loc][directions]
+    else:
+        print("You cannot go in that direction")
