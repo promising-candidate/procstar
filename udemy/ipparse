@@ -1,0 +1,19 @@
+ip = input("Please enter your IP address: ")
+
+segment = 1
+length = 0
+char = ""
+
+
+
+for char in ip:
+    if char == '.':
+        print("segment {} contains {} characters".format(segment, length))
+        segment += 1
+        length = 0
+    else:
+        length += 1
+
+# Unless final character is a . then we haven't printed the last segment
+if char != '.':
+    print("segment {} contains {} characters".format(segment, length))
