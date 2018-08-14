@@ -1,0 +1,19 @@
+""
+Basic exponent operation thing. Guess it's an idiot test. It was more fun to make python do all the work
+rather than to just do the operation and then manually go to the web page for the next challenge
+"""
+import webbrowser
+
+url = "http://www.pythonchallenge.com/pc/def/0.html"
+
+operation = str(2 ** 38)
+
+list_url = url.split('0')
+
+portion_url = list_url[0]
+
+usable_url = portion_url + operation + ".html"
+
+print(usable_url)
+
+webbrowser.open(usable_url, new=0, autoraise=True)
