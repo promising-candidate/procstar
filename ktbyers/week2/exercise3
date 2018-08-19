@@ -17,7 +17,7 @@ Write this string containing the three ARP entries out to a file named "arp_entr
 '''
 from pprint import pprint
 
-with open('/home/r3z1105/PycharmProjects/week2/show_arp.txt', 'r') as sharp:
+with open('/home/redacted/PycharmProjects/week2/show_arp.txt', 'r') as sharp:
     contents = sharp.readlines()
 
 contents = contents[1:]
@@ -28,5 +28,5 @@ pprint(my_contents)
 my_contents = '\n'.join(my_contents)
 pprint(my_contents)
 
-with open('/home/r3z1105/PycharmProjects/week2/arp_entries.txt', 'wt') as file:
+with open('/home/redacted/PycharmProjects/week2/arp_entries.txt', 'wt') as file:
     file.write(my_contents)
