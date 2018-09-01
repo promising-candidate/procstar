@@ -1,0 +1,28 @@
+'''
+Read the "show_vlan.txt" file into your program.
+Loop through the lines in this file and extract all of the VLAN_ID, VLAN_NAME combinations.
+From these VLAN_ID and VLAN_NAME construct a new list where each element
+in the list is a tuple consisting of (VLAN_ID, VLAN_NAME).
+Print this data structure to the screen. Your output should look as follows:
+[('1', 'default'),
+ ('400', 'blue400'),
+ ('401', 'blue401'),
+ ('402', 'blue402'),
+ ('403', 'blue403')]
+'''
+from pprint import pprint
+
+vlan_list = []
+
+with open('/home/r3z1105/PycharmProjects/week3/show_vlan.txt', 'r') as vlan:
+    show_vlan = vlan.read()
+
+for i in show_vlan.splitlines():
+    if 'VLAN' in i or '-----' in i or i.startswith(' '):
+        continue
+    field = i.split()
+    vlan_id = field[0]
+    vlan_name = field[1]
+    vlan_list.append((vlan_id, vlan_name))
+
+pprint(vlan_list)
