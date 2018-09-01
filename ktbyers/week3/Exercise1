@@ -14,7 +14,7 @@ from pprint import pprint
 
 vlan_list = []
 
-with open('/home/r3z1105/PycharmProjects/week3/show_vlan.txt', 'r') as vlan:
+with open('/home/redacted/PycharmProjects/week3/show_vlan.txt', 'r') as vlan:
     show_vlan = vlan.read()
 
 for i in show_vlan.splitlines():
