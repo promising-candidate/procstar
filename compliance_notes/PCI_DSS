@@ -1,0 +1,161 @@
+Terms
+PAN - Primary Account Number
+PCI/DSS - Payment Card Industry Data Security Standard
+
+Part 1 - Introduction
+
+Why do we need PCI/DSS
+Fraud losses are estimated to be in the billions
+Identity Theft
+Legal Costs, Settlements and Judgements
+Higher Subsequent costs of compliance
+Lost customer confidence
+Lost Sales
+Cost of re-issuing new payment cards
+Loss of ability to process payment cards
+
+Who must comply with PCI/DSS standards
+PCI security for merchants and payment card processors is the vital result of applying the information security best practices in the payment card industry data security standards (PCI/DSS). This standard includes 12 requirements for any business that stores, processes, or transmits payment cardholder data
+PCI DSS is the global security standard that any business of any size must adhere to in order to accept payment cards, and to store, process, or transmit cardholder data. It presents common sense steps that mirror best security best practices.
+
+Where is data vulnerable
+Data in a payment system database
+Compromised card readers and PoS systems
+Paper records improperly stored
+Hidden camera recording of authentication data
+Secret tap into stores wired or wireless network
+ATM’s modified to contain software or hardware shims
+Residual information in RAM of systems that accept payment card information (ram scraping)
+
+Part 2 - Attacks and sources of risk
+
+Well-known attacks
+In 2012, about 40 million sets of PCI were compromised by a hack on Adobe Systems.
+In July 2013, press reports indicated four Russians and a Ukrainian were indicted in New Jersey for what was called “the largest hacking and data breach scheme ever prosecuted in the United States”
+Between November-December of 2013, a breach of Target Corporation  resulted in exposed data from about 40 million credit cards. The information stolen included names, expiry date, account number and security code
+From July-October of 2013, a hacking attack compromised about a million sets of payment card data stored on computers at Neiman-Marcus
+On September 8th 2014, The Home Depot confirmed that their payments systems were compromised and released a statement saying a total of 56 million credit card numbers were disclosed as a result.
+
+Common Sources
+Outsider attack
+Insider-accidental
+Insider-malicious
+
+Common Types
+Stolen laptop or computer
+Exposure on Internet or E-mail
+Hack
+Documents lost in the mail or on disposal
+Scams and Social Engineering
+
+Part 3 - PCI Tools
+PCI SSC - The PCI Security Standards Council offers robust and comprehensive standards and supporting materials to enhance payment card data security
+PCI DSS - Provides an actionable framework for developing a robust payment card data security process - including prevention, detection, and appropriate reaction to security incidents
+Qualified Security Assessors - QSA’s  are approved by the council to assess compliance with PCI-DSS
+Self-Assessment Questionnaire - SAQ’s is a validation tool for organizations that are not required to undergo an on-site assessment 
+
+Part 4 - Goals and Requirements
+
+What is PCI DSS
+Payment Card Industry Data Security Standard
+The goal of PCI DSS is to protect cardholder data that is processed, stored, or transmitted by merchants
+The security controls and processes required by PCI DSS are vital for protecting cardholder account data, including the PAN printed on the front of the card
+
+
+Goals
+PCI DSS Requirements
+Build and maintain a secure network
+1.Install and a maintain a firewall configuration to protect cardholder data
+2.Do not use vendor-supplied defaults for passwords or other security parameters
+Protect Cardholder Data
+3. Protect Stored Data
+4.Encrypt transmission of cardholder data on open, public networks
+Maintain a vulnerability management program
+5.Use and regularly update anti-virus software
+6.Develop and maintain secure systems and applications
+Implement Strong Access Control measures
+7. Restrict access to cardholder data to business need-to-know
+8. Assign a unique ID to each person with computer access
+9.Restrict physical access to cardholder data
+Regularly monitor and test networks
+10. Track and monitor all access to network resources and cardholder data
+11.Regularly test security systems and processes
+Maintain an Information Security Policy
+12. Maintain a policy that addresses information security
+
+Part 5 - PCI DSS requirements in depth
+
+Build and maintain a secure network
+Install and maintain a firewall configuration to protect cardholder data
+Standards for configuration and testing
+“Deny All” from untrusted networks
+Prohibit direct public access between the internet and any system component in the cardholder data environment
+Personal firewall software must be installed on mobile devices and/or employee owned computers used to access the organizations network
+     2. Do not use vendor-supplied defaults for passwords or other security parameters 
+Most vendor defaults are simple and easy to guess
+Frequently designed for ease of use
+Passwords and other default settings should be changed before connected installing on network
+Define and apply system base-lines and standard configurations addressing known vulnerabilities
+Encrypt all non-console administrative access
+	3. Protect stored cardholder data
+Limit storage and retention
+Don’t store sensitive authentication information after authorization
+Mask the PAN when displayed (1st 6 or last 4)
+Protect keys used for encryption
+Document and manage all key management processes and procedures
+	4. Encrypt transmission of cardholder data
+Use strong cryptography and transport protocols like SSL/TLS or IPSEC for transmission over open, public networks (Internet, wireless, etc)
+Never send PAN’s unencrypted by end-user messaging technologies
+	5. Use and regularly update anti-virus software or programs
+Deploy anti-virus software on all systems affected by malicious software
+Ensure that all anti-virus software is current and actively running and capable of generating audit logs
+	6. Develop and maintain secure systems and applications
+Ensure all system components and software have the latest vendor-supplied patches (critical patches installed within a month)
+Establish a process to identify new vulnerabilities (alert services, vulnerability scans/services)
+Develop software applictions in accordance with PCI DSS based on industry best practices and incorporate information security throughout the software development life cycle
+Follow change control procesdures for all changes to system components
+Develop web-based applications based on secure coding guidelines
+Ensure all public web-facing applications are protected
+	7. Restrict access to cardholder data by business need-to-known
+Allow access only as job requires access
+Establish access control system for components with multiple users. Default to “deny all” unless specifically allowed
+	8. Assign a unique ID to each person with computer access
+Assign all users a unique user name before allowing them access
+Require authentication by password, passphrase, or two-factor authentication
+Implement two-factor authentication for remote access to the network by empployees administrators and third parties
+Render all password unreadable for storage and transmission
+Ensure proper user authentication and password management for non-consumer users and administrators on all system components
+9. Restrict physical access to cardholder data
+Use facility controls to limit and monitor physical access in the data environments
+Develop procedures to help personnel easily distinguish between employess and visitors
+Ensure all visitors are authorized before allowing entry to sensitive areas
+Use a visitor log to maintain a physical audit trail
+Store media back-ups in a secure location
+Physically secure all paper and electronic media containing card holder data
+Control internal/external distribution of any kind of media containing cardholder data
+Ensure that mgmt approves moving secured media
+Maintain strict control over storage and accessibility of media
+Destroy media containing cardholder data when no longer needed
+10. Track and monitor all access to network resources and cardholder data
+Link all access to an individual users
+Implement audit trails
+Record audit trail entries for each event including user id, type of event, date and time, success/failure, identity or name of affected data syncronize all critical system clocks and times
+Secure audit trails to prevent alterations
+Review logs for security functions (at least) daily
+Retain audit trail history for at least one year with 3 months being immediately available for analysis
+	11. Regularly test security systems and processes
+Test for unauthorized wireless access points at least quarterly
+Run internal and external network vulnerability scans
+Perform internal and external penetration testing
+Use network IDS/IPS to monitor all traffic in cardholder data environment
+Deploy file integrity checkers to alert personnel to unauthorized modification of critical system files, configuration files or content files
+	12. Maintain a policy that addresses information security for employees and contractors
+Establish, publish, maintain, and distribute a security policy that addresses all PCI DSS requirements
+Develop daily operational security procedures that are consistent with requirements of PCI DSS
+Develop usage policies for critical employee-facing tech to define proper usage, including remote access, wireless, removable media, laptops handheld devices, etc
+Ensure the policy and procedures clearly define information security responsibilities for all employees and contractors
+Assign to an individual or team information security responsibilities
+Implement a formal security awareness program to make all employees aware of the importance of cardholder data security
+Screen employees prior to hiring
+If cardholder data is shared with service providers, then require them to implement PCI DSS policies and procedures
+Implement an Incident Response Plan
