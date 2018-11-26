@@ -1,0 +1,7 @@
+number_list = range(1, 1001)
+
+chosen_number = int(input("Please select a number between 1 and 1000: "))
+
+for i in number_list:
+    if i % chosen_number == 0:
+        print(i)
