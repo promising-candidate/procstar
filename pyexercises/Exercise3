@@ -1,0 +1,13 @@
+exercise_list = []
+
+chosen_list = []
+
+number = int(input("Please give me a number: "))
+
+for i in range(1000):
+    exercise_list.append(i)
+for element in exercise_list:
+    if element < number:
+        chosen_list.append(element)
+
+print(chosen_list)
