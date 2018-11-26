@@ -1,0 +1,14 @@
+import random
+
+a = random.sample(range(100), 12)
+b = random.sample(range(100), 15)
+c = []
+
+for i in a:
+    if i in b:
+        c.append(i)
+
+if not c:
+    print("There are no matches")
+
+print(set(c))
