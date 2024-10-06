@@ -1,0 +1,13 @@
+name: hello-world
+on: workflow_dispatch
+
+jobs:
+  hello:
+   runs-on: ubuntu-latest
+   steps:
+     - name: hello
+       uses: Dcrash0veride/custom_action@b2d1c61eaddb94ed21e2b67b47af269b4dbfdf5a
+    
+     - name: night-night
+       run: |
+         sleep 9000
