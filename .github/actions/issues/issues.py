@@ -3,7 +3,7 @@ import os
 import json
 import sys
 
-#sys.tracebacklimit = 0
+sys.tracebacklimit = 0
 
 
 def create_issue(title, body, assignees, milestone, labels, repo):
@@ -36,5 +36,5 @@ if __name__ == '__main__':
         labels = payload['labels']
         repo = payload['repo']
     except KeyError as e:
-        raise ValueError(e "Need to define all portions of payload")
+        raise ValueError("Need to define all portions of payload: {e}") from e
     create_issue(title, body, assignee, milestone, labels, repo)
