@@ -16,6 +16,6 @@ jobs:
           {
             "title":"Ticket from action",
             "body":"This is a ticket body",
-            "assignee":"promising-candidate",
+            "assignee":"promising-candidate"
           }
        
