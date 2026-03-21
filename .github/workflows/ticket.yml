@@ -1,0 +1,16 @@
+name: IssueOps
+
+on:
+  issue_comment:
+    types: created
+
+jobs:
+  IssueOps:
+    if: ${{ github.event.comment.body == 'Approved'}} && ${{ github.actor == 'promising-candidate'}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Echo Step
+      with:
+        script: |
+        echo ${{ github.event.comment.body }}
+        
