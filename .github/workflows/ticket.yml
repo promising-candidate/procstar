@@ -9,10 +9,11 @@ jobs:
     if: contains(github.event.issue.title, 'Lab available for testing') && github.event.comment.body == 'Approved' && github.actor == 'promising-candidate'
     runs-on: ubuntu-latest
     steps:
-    - name: Echo Step
+    - name: create_var
       run: |
-        echo ${{ github.event.comment.body }}
-        echo ${{ github.actor }}
         lab_name=$(echo "${{ github.event.issue.title }}" | grep -oP '(?<=Lab available for testing ).*')
-        echo $lab_name
+        echo "lab_name=$lab_name" >> $GITHUB_ENV
+    - name: Echo Vals
+      run: |
+        echo ${{ env.lab_name }}
         
