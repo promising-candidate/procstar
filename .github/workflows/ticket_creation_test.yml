@@ -1,0 +1,7 @@
+name: IssueOps
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  Create Ticket
