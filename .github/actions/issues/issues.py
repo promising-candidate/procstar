@@ -6,7 +6,7 @@ import sys
 #sys.tracebacklimit = 0
 
 
-def create_issue(title, body, assignees, milestone=None, labels='bug', repo=None):
+def create_issue(title, body, assignees, milestone, labels, repo):
     base_  = 'https://api.github.com/repos/promising-candidate/' + repo + '/issues'
     token = os.environ['PAT']
     headers = {'Authorization': 'Bearer ' + token}
@@ -36,10 +36,5 @@ if __name__ == '__main__':
         labels = payload['labels']
         repo = payload['repo']
     except KeyError as e:
-        if e == 'milestone':
-            milestone = None
-        if e == 'labels':
-            labels = 'bug'
-        if e == 'repo':
-            repo = 'procstar'
+        raise ValueError(e "Need to define all portions of payload")
     create_issue(title, body, assignee, milestone, labels, repo)
