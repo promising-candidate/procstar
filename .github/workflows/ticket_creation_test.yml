@@ -14,7 +14,7 @@ jobs:
        with:
          payload: > 
           {
-            "title":"Just an example ${{ github.ref_name }}",
+            "title":"Lab available for testing Introduction to Wazuh",
             "body":"This is a ticket body and this is a super long ticket body that\nwraps around and continues so I can test what long bodies look like",
             "assignee":"promising-candidate",
             "milestone":"None",
