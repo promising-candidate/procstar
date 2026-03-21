@@ -3,7 +3,7 @@ import os
 import json
 import sys
 
-sys.tracebacklimit = 0
+#sys.tracebacklimit = 0
 
 
 def create_issue(title, body, assignees, milestone=None, labels='bug', repo=None):
