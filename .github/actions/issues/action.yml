@@ -1,0 +1,10 @@
+name: 'Creates an issue'
+description: 'Creates an issue in the chosen repository'
+author: 'jmcshannon@'
+inputs:
+  pat:
+    description: 'This is the access token needed to create issues'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
