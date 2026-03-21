@@ -12,7 +12,7 @@ jobs:
      - name: create_ticket
        uses: ./.github/actions/issues
        with:
-         payload: | 
+         payload: > 
           {
             "title":"Just an example ${{ github.ref_name }}",
             "body":"This is a ticket body and this is a super long ticket body that
