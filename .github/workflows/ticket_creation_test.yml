@@ -14,7 +14,7 @@ jobs:
        with:
          payload: | 
           {
-            "title":"Just an example '"${{ github.ref_name }}"'",
+            "title":"Just an example ${{ github.ref_name }}",
             "body":"This is a ticket body",
             "assignee":"promising-candidate",
             "milestone":"None",
