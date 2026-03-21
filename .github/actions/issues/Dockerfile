@@ -6,4 +6,4 @@ RUN pip install -r requirements.txt
 
 COPY issues.py /issues.py
 
-CMD ["python", "issues.py"]
+CMD ["python", "/issues.py"]
