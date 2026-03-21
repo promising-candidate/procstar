@@ -6,7 +6,7 @@ on:
 
 jobs:
   IssueOps:
-    if: github.event.comment.body == 'Approved' && github.actor == 'promising-candidate'
+    if: contains(github.event.issue.title, 'Lab available for testing') && github.event.comment.body == 'Approved' && github.actor == 'promising-candidate'
     runs-on: ubuntu-latest
     steps:
     - name: Echo Step
