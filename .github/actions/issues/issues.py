@@ -1,6 +1,9 @@
 import requests
 import os
 import json
+import sys
+
+sys.tracebacklimit = 0
 
 
 def create_issue(title, body, assignees, milestone=None, labels='bug', repo=None):
@@ -31,7 +34,12 @@ if __name__ == '__main__':
         assignee = payload['assignee']
         milestone = payload['milestone']
         labels = payload['labels']
-        repo = 'procstar'
+        repo = payload['repo']
     except KeyError as e:
-        raise ValueError(e)
+        if e == 'milestone':
+            milestone = None
+        if e == 'labels':
+            labels = 'bug'
+        if e == 'repo':
+            repo = 'procstar'
     create_issue(title, body, assignee, milestone, labels, repo)
