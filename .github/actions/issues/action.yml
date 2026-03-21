@@ -5,6 +5,9 @@ inputs:
   pat:
     description: 'This is the access token needed to create issues'
     required: true
+  payload:
+    description: 'Json of required ticket values such as title, body, etc'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
