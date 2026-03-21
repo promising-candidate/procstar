@@ -1,4 +1,4 @@
-name: IssueOps
+name: Ticket Creator
 
 on:
   workflow_dispatch: 
