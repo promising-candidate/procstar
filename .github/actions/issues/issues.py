@@ -21,7 +21,10 @@ def create_issue(title, body, assignees, milestone=None, labels='bug', repo=None
 
 
 if __name__ == '__main__':
-    payload = os.environ['INPUT_PAYLOAD']
+    try:
+        payload = json.loads(os.environ['INPUT_PAYLOAD'])
+    except json.JSONDecodeError:
+        raise ValueError("JSON IS INVALID")
     title = payload['title']
     body = payload['body']
     assignee = payload['assignee']
