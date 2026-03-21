@@ -15,8 +15,7 @@ jobs:
          payload: > 
           {
             "title":"Just an example ${{ github.ref_name }}",
-            "body":"This is a ticket body and this is a super long ticket body that
-            wraps around and continues so I can test what long bodies look like",
+            "body":"This is a ticket body and this is a super long ticket body that\nwraps around and continues so I can test what long bodies look like",
             "assignee":"promising-candidate",
             "milestone":"None",
             "labels":"bug",
