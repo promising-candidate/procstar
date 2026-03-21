@@ -6,11 +6,10 @@ on:
 
 jobs:
   IssueOps:
-    if: ${{ github.event.comment.body == 'Approved'}} && ${{ github.actor == 'promising-candidate'}}
+    if: ${{ github.event.comment.body }} == 'Approved' && ${{ github.actor }} == 'promising-candidate'
     runs-on: ubuntu-latest
     steps:
     - name: Echo Step
-      with:
-        script: |
+      run: |
         echo ${{ github.event.comment.body }}
         
