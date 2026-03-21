@@ -13,5 +13,6 @@ jobs:
       run: |
         echo ${{ github.event.comment.body }}
         echo ${{ github.actor }}
-        echo ${{ github.event.issue.title }}
+        lab_name=$(grep -oP '(?<=Lab Available for testing ).*' ${{ github.event.issue.title }})
+        echo $lab_name
         
