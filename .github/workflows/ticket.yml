@@ -13,4 +13,5 @@ jobs:
       run: |
         echo ${{ github.event.comment.body }}
         echo ${{ github.actor }}
+        echo ${{ github.event.issue.title }}
         
