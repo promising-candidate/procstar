@@ -4,4 +4,11 @@ on:
   workflow_dispatch: 
 
 jobs:
-  Create Ticket
+  create_ticket:
+   runs-on: ubuntu-latest
+   steps:
+     - name: create_ticket
+       uses: ./.github/actions/issues
+       with:
+         payload: '{"title":"Ticket from action","body":"This is a ticket body","assignee":"promising-candidate",
+       
