@@ -10,5 +10,10 @@ jobs:
      - name: create_ticket
        uses: ./.github/actions/issues
        with:
-         payload: '{"title":"Ticket from action","body":"This is a ticket body","assignee":"promising-candidate",
+         payload: | 
+          {
+            "title":"Ticket from action",
+            "body":"This is a ticket body",
+            "assignee":"promising-candidate",
+          }
        
