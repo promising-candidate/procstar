@@ -25,5 +25,6 @@ jobs:
           :
         else
           echo "$course"
+        fi
         
         
