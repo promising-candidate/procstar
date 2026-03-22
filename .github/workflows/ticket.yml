@@ -12,10 +12,14 @@ jobs:
     - name: create_var
       env:
         ISSUE_TITLE: ${{ github.event.issue.title }}
+        ISSUE_BODY: ${{ github.event.issue.body }}
       run: |
         lab_name=$(printf '%s\n' "$ISSUE_TITLE" | grep -oP '(?<=Lab available for testing ).*')
+        course=$(printf '%s\n' "$ISSUE_BODY" | grep -oP '$(?<=Course ).*')
+        echo "course=$course" >> $GITHUB_ENV
         echo "lab_name=$lab_name" >> $GITHUB_ENV
     - name: Echo Vals
       run: |
         echo ${{ env.lab_name }}
+        echo ${{ env.course }}
         
