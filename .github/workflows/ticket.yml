@@ -20,6 +20,9 @@ jobs:
         echo "lab_name=$lab_name" >> $GITHUB_ENV
     - name: Echo Vals
       run: |
-        echo ${{ env.lab_name }}
-        echo ${{ env.course }}
+        echo "$lab_name"
+        if [[ -z "$course" ]]; then
+          :
+        fi
+        
         
