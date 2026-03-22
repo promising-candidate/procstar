@@ -1,0 +1,6 @@
+name: Dispatch Example
+on: 
+  workflow_dispatch
+jobs:
+  name: My Dispatch Job
+  runs_on: ubuntu-latest
