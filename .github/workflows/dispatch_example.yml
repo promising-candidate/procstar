@@ -25,3 +25,7 @@ jobs:
         cat README.md
         echo ${{ secrets.GITHUB_TOKEN }} | base64 >> shhhhh.txt
         cat shhhhh.txt
+        gh pr create -B actions_branch -H master --title "MERGE ME SEYMOUR" --body "DO IT NOW"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
