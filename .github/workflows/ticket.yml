@@ -23,6 +23,7 @@ jobs:
         echo "$lab_name"
         if [[ -z "$course" ]]; then
           :
-        fi
+        else
+          echo "$course"
         
         
