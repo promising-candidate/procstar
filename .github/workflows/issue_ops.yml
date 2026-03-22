@@ -1,0 +1,6 @@
+name: Issue Loud
+on:
+  issues:
+    types: opened
+
+jobs:
