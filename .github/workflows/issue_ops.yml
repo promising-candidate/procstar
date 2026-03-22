@@ -9,7 +9,7 @@ jobs:
    steps:
      - name: read_title
        run: |
-           echo ${{ github.event.issue.title }}
+           echo "${{ github.event.issue.title }}"
      - name: read_author
        run: |
          echo "${{ github.actor }}"
