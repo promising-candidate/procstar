@@ -1,6 +1,19 @@
 name: Issue Loud
 on:
   issues:
-    types: opened
+    types: opened 
 
 jobs:
+  read_ticket:
+   runs-on: ubuntu-latest
+   steps:
+     - name: read_title
+       run: |
+           echo ${{ github.event.issue.title }}
+     - name: read_author
+       run: |
+         echo "${{ github.actor }}"
+     - name: read_body
+       run: |
+         echo ${{ github.event.issue.body }}
+         
