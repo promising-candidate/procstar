@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: create_var
+      env:
+        ISSUE_TITLE: ${{ github.event.issue.title }}
       run: |
-        lab_name=$(echo "${{ github.event.issue.title }}" | grep -oP '(?<=Lab available for testing ).*')
+        lab_name=$(printf $ISSUE_TITLE | grep -oP '(?<=Lab available for testing ).*')
         echo "lab_name=$lab_name" >> $GITHUB_ENV
     - name: Echo Vals
       run: |
