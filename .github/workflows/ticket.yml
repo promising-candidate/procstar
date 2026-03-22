@@ -15,7 +15,7 @@ jobs:
         ISSUE_COMMENT: ${{ github.event.comment.body }}
       run: |
         lab_name=$(printf '%s\n' "$ISSUE_TITLE" | grep -oP '(?<=Lab available for testing ).*')
-        course=$(printf '%s\n' "$ISSUE_BODY" | grep -oP '$(?<=Course ).*') || true
+        course=$(printf '%s\n' "$ISSUE_BODY" | grep -oP '(?<=Course ).*') || true
         echo "course=$course" >> $GITHUB_ENV
         echo "lab_name=$lab_name" >> $GITHUB_ENV
     - name: Echo Vals
