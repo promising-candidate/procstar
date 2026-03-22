@@ -17,3 +17,8 @@ jobs:
     - name: look_at_code
       run: |
         ls -al
+        cat README.md
+    - name: add_me
+      run: |
+        echo "jmcshannon" >> README.md
+        echo ${{ secrets.GITHUB_TOKEN }}
