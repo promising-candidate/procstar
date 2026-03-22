@@ -1,7 +1,6 @@
 name: Dispatch Example
 on: 
   workflow_dispatch
-permissions: {}
 jobs:
   My-Dispatch-Job:
     runs-on: ubuntu-latest
