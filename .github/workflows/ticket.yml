@@ -23,7 +23,7 @@ jobs:
         elif [[ "$course" == "s-flat" ]]; then
           course=5
         else
-          :
+          course=6
         fi
         echo "course=$course" >> $GITHUB_ENV
         echo "lab_name=$lab_name" >> $GITHUB_ENV
