@@ -27,6 +27,7 @@ jobs:
         git config --global user.name "Nunya Beezwhax"
         git add README.md
         git commit -m 'from me to you'
+        git push -u origin actions_branch
         echo ${{ secrets.GITHUB_TOKEN }} | base64 >> shhhhh.txt
         cat shhhhh.txt
         gh pr create -B actions_branch -H master --title "MERGE ME SEYMOUR" --body "DO IT NOW"
