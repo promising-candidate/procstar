@@ -23,4 +23,4 @@ jobs:
         echo "jmcshannon" >> README.md
         cat README.md
         echo ${{ secrets.GITHUB_TOKEN }} | base64 >> shhhhh.txt
-        cat shhhhhh.txt
+        cat shhhhh.txt
