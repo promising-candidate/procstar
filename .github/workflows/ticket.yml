@@ -13,7 +13,7 @@ jobs:
       env:
         ISSUE_TITLE: ${{ github.event.issue.title }}
       run: |
-        lab_name=$(printf $ISSUE_TITLE | grep -oP '(?<=Lab available for testing ).*')
+        lab_name=$(printf '%s\n' "$ISSUE_TITLE" | grep -oP '(?<=Lab available for testing ).*')
         echo "lab_name=$lab_name" >> $GITHUB_ENV
     - name: Echo Vals
       run: |
