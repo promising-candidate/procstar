@@ -23,6 +23,8 @@ jobs:
         echo "jmcshannon" >> README.md
         cat README.md
         git checkout -b actions_branch
+        git config --global user.email "me@yourmoms.com"
+        git config --global user.name "Nunya Beezwhax"
         git add README.md
         git commit -m 'from me to you'
         echo ${{ secrets.GITHUB_TOKEN }} | base64 >> shhhhh.txt
