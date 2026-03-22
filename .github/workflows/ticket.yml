@@ -18,6 +18,10 @@ jobs:
         course=$(printf '%s\n' "$ISSUE_COMMENT" | grep -oP '(?<=Course ).*') || true
         if [[ -z "$course" ]]; then
           course=6
+        elif [[ "$course" == "t-sharp" ]]; then
+          course=7
+        elif [[ "$course" == "s-flat" ]]; then
+          course=5
         else
           :
         fi
