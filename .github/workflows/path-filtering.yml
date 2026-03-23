@@ -25,4 +25,9 @@ jobs:
        echo "$files"
        dirs=$(echo "$files" | xargs -n1 dirname | sort -u)
        echo "Changed directories:"
-       echo "$dirs"
+       echo "dirs=$dirs" >> $GITHUB_ENV
+    - name: Show the dirs
+      with:
+        DIRS: ${{ env.dirs }}
+      run: |
+        echo $DIRS
