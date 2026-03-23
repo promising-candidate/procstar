@@ -14,10 +14,10 @@ jobs:
         fetch-depth: 0
     - name: Files Changed
       env:
-        GH_BEFORE: ${{ github.event.before }}
-        GH_AFTER: ${{ github.sha }}
+        GH_BASE: ${{ github.base_ref }}
       run: |
-       files=$(git diff --name-only "$GH_BEFORE" "$GH_AFTER")
+       git fetch origin "$GH_BASE"
+       files=$(git diff --name-only origin/"$GH_BASE"...HEAD)
        echo "Changed Files:"
        echo "$files"
        dirs=$(echo "$files" | xargs -n1 dirname | sort -u)
