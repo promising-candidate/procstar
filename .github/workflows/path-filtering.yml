@@ -16,7 +16,7 @@ jobs:
         GH_BEFORE: ${{ github.event.before }}
         GH_AFTER: ${{ github.sha }}
       run: |
-       files=$(git diff --name-only $GH_BEFORE GH_AFTER)
+       files=$(git diff --name-only "$GH_BEFORE" "$GH_AFTER")
        echo "Changed Files:"
        echo "$files"
        dirs=$(echo "$files" | xargs -n1 dirname | sort -u)
