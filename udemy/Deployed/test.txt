@@ -1,1 +1,2 @@
 This is just a simple text file
+This is an update to the text file
