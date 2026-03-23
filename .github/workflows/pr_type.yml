@@ -1,0 +1,28 @@
+name: WhatChanged
+
+on:
+  pull_request:
+    types: opened
+
+jobs:
+  ShowPath:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+    - name: Files Changed
+      env:
+        GH_BEFORE: ${{ github.event.before }}
+        GH_AFTER: ${{ github.sha }}
+      run: |
+       files=$(git diff --name-only "$GH_BEFORE" "$GH_AFTER")
+       echo "Changed Files:"
+       echo "$files"
+       dirs=$(echo "$files" | xargs -n1 dirname | sort -u)
+       echo "Changed directories:"
+       echo "dirs=$dirs" >> $GITHUB_ENV
+    - name: Show the dirs
+      run: |
+        echo $dirs
