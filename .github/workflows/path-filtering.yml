@@ -27,7 +27,5 @@ jobs:
        echo "Changed directories:"
        echo "dirs=$dirs" >> $GITHUB_ENV
     - name: Show the dirs
-      with:
-        DIRS: ${{ env.dirs }}
       run: |
-        echo $DIRS
+        echo $dirs
