@@ -9,6 +9,8 @@ jobs:
   ShowPath:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v6
     - name: Files Changed
       env:
         GH_BEFORE: ${{ github.event.before }}
