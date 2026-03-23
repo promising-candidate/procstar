@@ -1,0 +1,23 @@
+name: PathFinder
+
+on:
+  push:
+    paths: 
+    - udemy/**
+
+jobs:
+  ShowPath:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Files Changed
+      env:
+        GH_BEFORE: ${{ github.event.before }}
+        GH_AFTER: ${{ github.sha }}
+      run: |
+       git fetch --depth=2 origin
+       files=$(git diff --name-only $GH_BEFORE GH_AFTER)
+       echo "Changed Files:"
+       echo "$files"
+       dirs=$(echo "$files" | xargs -n1 dirname | sort -u)
+       echo "Changed directories:"
+       echo "$dirs"
