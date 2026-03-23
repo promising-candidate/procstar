@@ -16,7 +16,6 @@ jobs:
         GH_BEFORE: ${{ github.event.before }}
         GH_AFTER: ${{ github.sha }}
       run: |
-       git fetch --depth=2 origin
        files=$(git diff --name-only $GH_BEFORE GH_AFTER)
        echo "Changed Files:"
        echo "$files"
