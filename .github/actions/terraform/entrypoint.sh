@@ -8,6 +8,7 @@ export ARM_SUBSCRIPTION_ID=${INPUT_ARM_SUBSCRIPTION_ID}
 export ARM_TENANT=${INPUT_ARM_TENANT_ID}
 
 cd /workspace
+ls -al
 
 terraform init
 terraform fmt -check
