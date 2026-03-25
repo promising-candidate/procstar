@@ -14,10 +14,6 @@ inputs:
   ARM_TENANT_ID:
     description: 'Azure Tenant id'
     required: true
-  APPLY:
-    description: 'Set to true to apply'
-    required: false
-    default: 'false'
   COMMENTER:
     description: 'Username of the commenter'
     required: true
