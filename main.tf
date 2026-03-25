@@ -12,7 +12,7 @@ provider "azurerm" {
   features {}
 }
 
-variable "rg_name" {
+variable "commenter" {
   description = "The name of the resource group"
   type        = string
   nullable = false
@@ -20,6 +20,6 @@ variable "rg_name" {
 
 
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-student-${var.rg_name}"
+  name     = "rg-student-${var.commenter}"
   location = "westus2"
 }
