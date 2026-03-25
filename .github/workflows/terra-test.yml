@@ -34,3 +34,4 @@ jobs:
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
           APPLY: ${{ contains(github.event.comment.body, '/apply') }}
+          COMMENTER: ${{ github.event.comment.user.login }}
