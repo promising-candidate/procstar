@@ -16,6 +16,11 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          COMMENTER: ${{ github.event.comment.user.login }}
        run: |
+         REPO_OWNER=$(echo $GITHUB_REPOSITORY | cut -d/ -f1)
+         if [[ "$COMMENTER" == "$REPO_OWNER" ]]; then
+           echo "Permissions=write" >> $GITHUB_ENV
+           exit 0
+         fi 
          perms=$(curl -s -H 'Authorization: token $GITHUB_TOKEN' \
          -H "Accept: application/vnd.github.v3+json" \
          https://api.github.com/repos/procstar/collaborators/${COMMENTER}/permission \
