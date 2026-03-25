@@ -13,9 +13,5 @@ ls -al
 echo "${INPUT_COMMENTER}"
 
 terraform init
-terraform fmt -check
-terraform validate
 terraform plan -out=tfplan -var "commenter=${INPUT_COMMENTER}"
-
-
 terraform apply -auto-approve tfplan
