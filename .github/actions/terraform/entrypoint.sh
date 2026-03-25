@@ -7,7 +7,7 @@ export ARM_CLIENT_SECRET=${INPUT_ARM_CLIENT_SECRET}
 export ARM_SUBSCRIPTION_ID=${INPUT_ARM_SUBSCRIPTION_ID}
 export ARM_TENANT=${INPUT_ARM_TENANT_ID}
 
-cd /workspace
+cd /github/workspace
 ls -al
 
 terraform init
