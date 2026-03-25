@@ -20,3 +20,6 @@ runs:
       description: 'Set to true to apply'
       required: false
       default: 'false'
+    COMMENTER:
+      description: 'Username of the commenter'
+      required: true
