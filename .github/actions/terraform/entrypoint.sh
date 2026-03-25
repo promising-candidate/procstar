@@ -12,7 +12,7 @@ cd /workspace
 terraform init
 terraform fmt -check
 terraform validate
-terraform plan -out=tfplan -var "commenter="${INPUT_COMMENTER}"
+terraform plan -out=tfplan -var "commenter=${INPUT_COMMENTER}"
 
 if [[ "${INPUT_APPLY}" == "true" ]]; then
     terraform apply -auto-approve tfplan
