@@ -1,25 +1,26 @@
 name: 'Terraform container actions'
 description: 'Terraform action for demonstrations'
+author: jmcshannon@
+inputs:
+  ARM_CLIENT_ID:
+    description: 'Az client id'
+    required: true
+  ARM_CLIENT_SECRET:
+    description: 'Azure client secret'
+    required: true
+  ARM_SUBSCRIPTION_ID:
+    description: 'Azure subscription ID'
+    required: true
+  ARM_TENANT_ID:
+    description: 'Azure Tenant id'
+    required: true
+  APPLY:
+    description: 'Set to true to apply'
+    required: false
+    default: 'false'
+  COMMENTER:
+    description: 'Username of the commenter'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  inputs:
-    ARM_CLIENT_ID:
-      description: 'Az client id'
-      required: true
-    ARM_CLIENT_SECRET:
-      description: 'Azure client secret'
-      required: true
-    ARM_SUBSCRIPTION_ID:
-      description: 'Azure subscription ID'
-      required: true
-    ARM_TENANT_ID:
-      description: 'Azure Tenant id'
-      required: true
-    APPLY:
-      description: 'Set to true to apply'
-      required: false
-      default: 'false'
-    COMMENTER:
-      description: 'Username of the commenter'
-      required: true
