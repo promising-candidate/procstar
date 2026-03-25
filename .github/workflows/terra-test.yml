@@ -1,12 +1,36 @@
 name: Terraform Testing
-on: workflow_dispatch
+on:
+  issue_comment:
+    types: [created]
 
 jobs:
-  TFPlan:
+  terraform:
     runs-on: ubuntu-latest
+    if: contains(github.event.comment.body, '/terraform apply')
     steps:
-      - name: set_author
-        env:
-          $AUTHOR: ${{ github.actor }}
-        run: |
-          echo "$AUTHOR"
+     - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
+     
+     - name: check_author
+       id: check_author
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         COMMENTER: ${{ github.event.comment.user.login }}
+       run: |
+         perms=$(curl -s -H 'Authorization: token $GITHUB_TOKEN' \
+         -H "Accept: application/vnd.github.v3+json" \
+         https://api.github.com/repos/${GITHUB_REPOSITORY}/collaborators/${COMMENTER}/permission \
+         | jq =r '.permission')
+         echo "Permissions=$perms" >> $GITHUB_ENV
+         if [[ "$perms" != "write" && "$perms" != "admin" ]]; then
+           echo "Unauthorized user"
+           exit 1
+         fi
+
+     - name: Run Terraform Action
+       uses: ./.github/actions/terraform
+       with:
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+          APPLY: ${{ contains(github.event.comment.body, '/apply') }}
