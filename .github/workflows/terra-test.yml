@@ -3,5 +3,10 @@ on: workflow_dispatch
 
 jobs:
   TFPlan:
+    runs-on: ubuntu-latest
     steps:
-      
+      - name: set_author
+        env:
+          $AUTHOR: ${{ github.actor }}
+        run: |
+          echo "$AUTHOR"
